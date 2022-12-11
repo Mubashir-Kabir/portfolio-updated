@@ -1,18 +1,34 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import ContactForm from "./Components/ContactForm";
-import Footer from "./Components/Footer";
-import HomeBanner from "./Components/HomeBanner";
-import Navbar from "./Components/Navbar";
-import Projects from "./Components/Projects";
+import Root from "./layout/Root";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+import Home from "./pages/Home";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root></Root>,
+      children: [
+        {
+          path: "/",
+          element: <Home></Home>,
+        },
+        {
+          path: "about",
+          element: <About></About>,
+        },
+        {
+          path: "blog",
+          element: <Blog></Blog>,
+        },
+      ],
+    },
+  ]);
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <HomeBanner></HomeBanner>
-      <Projects></Projects>
-      <ContactForm></ContactForm>
-      <Footer></Footer>
+      <RouterProvider router={router} />
     </div>
   );
 }

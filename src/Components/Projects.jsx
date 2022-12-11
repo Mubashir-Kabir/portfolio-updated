@@ -6,14 +6,16 @@ const Projects = () => {
       id: 1,
       name: "Koni's Kitchen",
       pic: "https://i.ibb.co/ZW9FpL5/Screenshot-2022-12-11-161927.png",
-      description: "Koni's Kichen is a service review website",
+      description:
+        "Koni's Kichen is a service review website. User can give reviews or opinion on services koni provide. User can also edit or delete own reviews",
       url: "https://koni-s-kitchen.firebaseapp.com/",
     },
     {
       id: 2,
       name: "Bike Zone",
       pic: "https://i.ibb.co/wss8C1S/Screenshot-2022-12-11-163002.png",
-      description: "Bike Zone is a bike resale website",
+      description:
+        "Bike Zone is a bike resale website. There are user, seller and admin role. User can do different kind of activities depend on their role.",
       url: "https://bike-zone-708de.web.app/",
     },
 
@@ -21,7 +23,8 @@ const Projects = () => {
       id: 3,
       name: "EduMart",
       pic: "https://i.ibb.co/51ZdGvK/Screenshot-2022-12-11-163347.png",
-      description: "EduMart is a online learning platform",
+      description:
+        "EduMart is a online learning platform. User can see details about any course and can have a premium access to specific course.",
       url: "https://edumart-113ce.firebaseapp.com/",
     },
   ];
@@ -38,6 +41,14 @@ const Projects = () => {
               <h2 className="card-title">{p.name}</h2>
               <p>{p.description}</p>
               <div className="card-actions justify-end">
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Details
+                </a>
                 <a
                   href={p.url}
                   target="_blank"

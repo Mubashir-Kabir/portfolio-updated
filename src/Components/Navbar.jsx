@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,8 +8,8 @@ const Navbar = () => {
     <div className="bg-base-200">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
-          <a
-            href="/"
+          <Link
+            to="/"
             aria-label="Mubashir Kabir"
             title="Mubashir Kabir"
             className="inline-flex items-center"
@@ -17,37 +18,37 @@ const Navbar = () => {
               <span className="hidden lg:inline-block">Mohammad</span> Mubashir
               Kabir
             </span>
-          </a>
+          </Link>
           <ul className=" items-center hidden space-x-8 lg:flex">
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 aria-label="Home"
                 title="Home"
                 className="font-medium tracking-wide"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/"
+              <Link
+                to="about"
                 aria-label="About"
                 title="About"
                 className="font-medium tracking-wide"
               >
-                About
-              </a>
+                About Me
+              </Link>
             </li>
             <li>
-              <a
-                href="/"
-                aria-label="Contact"
-                title="Contact"
+              <Link
+                to="blog"
+                aria-label="Blog"
+                title="Blog"
                 className="font-medium tracking-wide "
               >
-                Contact
-              </a>
+                Blog
+              </Link>
             </li>
           </ul>
           <div className="lg:hidden">
@@ -77,8 +78,8 @@ const Navbar = () => {
                 <div className="p-5 bg-base-100 border rounded shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <a
-                        href="/"
+                      <Link
+                        to="/"
                         aria-label="Company"
                         title="Company"
                         className="inline-flex items-center"
@@ -86,7 +87,7 @@ const Navbar = () => {
                         <span className="ml-2 text-xl font-bold tracking-wide  uppercase">
                           Mubashir Kabir
                         </span>
-                      </a>
+                      </Link>
                     </div>
                     <div>
                       <button
@@ -107,34 +108,34 @@ const Navbar = () => {
                   <nav>
                     <ul className="space-y-4">
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to="/"
                           aria-label="Home"
                           title="Home"
                           className="font-medium tracking-wide"
                         >
                           Home
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to="about"
                           aria-label="About"
                           title="About"
                           className="font-medium tracking-wide "
                         >
-                          About
-                        </a>
+                          About Me
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to="blog"
                           aria-label="Contact"
                           title="Contact"
                           className="font-medium tracking-wide "
                         >
-                          Contact
-                        </a>
+                          Blog
+                        </Link>
                       </li>
                     </ul>
                   </nav>
